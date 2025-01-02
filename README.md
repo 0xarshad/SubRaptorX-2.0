@@ -1,2 +1,2 @@
 # SubRaptorX 2.0
-Subdomain Enumeration Tool
+**Subdomain Enumeration Tool**
