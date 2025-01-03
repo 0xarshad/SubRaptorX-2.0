@@ -15,7 +15,7 @@
 
 - ✅ **Multi-Source Subdomain Enumeration:** Assetfinder, Subfinder, and Waybackurls.  
 - ✅ **Live Subdomain Validation:** Httprobe and Curl-based checks.  
-- ✅ **Automated Dependency Installation:** `install.sh` and `fix_install.sh` scripts for Linux distributions using ****Go****.
+- ✅ **Automated Dependency Installation:** `install.sh` and `fix_install.sh` scripts for Automated install using ****Go****.
 - ✅ **URL Normalization:** Removes `http://` and `https://` prefixes for consistency.  
 - ✅ **Deduplication:** Ensures unique subdomains in the final output.  
 - ✅ **Stylish Terminal Interface:** Color-coded and easy-to-read output.  
