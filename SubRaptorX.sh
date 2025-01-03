@@ -17,8 +17,6 @@ bold=$(tput bold)
 
 reset=$(tput sgr0)
 
-
-
 # Stylish Dividers
 
 divider() {
