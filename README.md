@@ -25,7 +25,7 @@
 
 ## 🛠️ **Dependencies**  
 
-Dependencies are automatically managed by the `main_install.sh` script using ****Go****. I found some issues with ***Subfinder*** installation using ****Go**** on Ubuntu and Linux Mint. To fix this issue, I made a fixation script namd  `fix_install.sh`. Run `fix_install.sh` first if you are using OS like **Ubuntu** and **Linux Mint**. Thanks to <a href="https://medium.com/@prathameshbagul"> prathameshbagul.
+Dependencies are automatically managed by the `install.sh` script using ****Go****. I found some issues with ***Subfinder*** installation using ****Go**** on Ubuntu and Linux Mint. To fix this issue, I made a fixation script namd  `fix_install.sh`. Run `fix_install.sh` first if you are using OS like **Ubuntu** and **Linux Mint**. Thanks to <a href="https://medium.com/@prathameshbagul"> prathameshbagul.
 
 ### 🐧 **Manual Installation (if needed)**  
 Make sure to copy all the tools to /usr/bin to make it permanantly available from anywhere.
