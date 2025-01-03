@@ -125,7 +125,7 @@ end() {
 
     echo -e "${bold}${green}🎯 Process Completed Successfully!${reset}"
 
-    echo -e "${yellow}---------${yellow}Thank you for using ${white}SubRaptor${reset}${red}X${reset}---------"
+    echo -e "${Yellow}---------${Blue}Thank you for using ${white}SubRaptor${reset}${red}X${reset}${Yellow}---------r${reset}"
 }
 
 
