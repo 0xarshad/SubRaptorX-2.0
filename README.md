@@ -25,12 +25,12 @@
 
 ## 🛠️ **Dependencies**  
 
-Dependencies are automatically managed by the `install.sh` script using ****Go****. I found some path variable issues with ***Subfinder*** installation using ****Go**** on Ubuntu and Linux Mint. To fix this issue, I made a fixation script namd  `fix_install.sh`. Run `fix_install.sh` first if you are using OS like **Ubuntu** and **Linux Mint**. Thanks to [prathameshbagulm](https://medium.com/@prathameshbagul).
+Dependencies are autonomously managed by the `install.sh` script utilizing ***Go***. During testing on widely-used Linux distributions, excluding ***Kali Linux***, I encountered a `GOROOT error` during the Subfinder installation process. To address this anomaly, I developed a remediation script named `fix_install.sh`. If you encounter a` GOROOT error` while executing `install.sh`, ensure you run `fix_install.sh` beforehand. Special thanks to [prathameshbagul](https://medium.com/@prathameshbagul) for their valuable contributions.
 
-**Important**: `fix_install.sh` will remove go if already installed and reinstall it with fixing path errors. Make sure to take backup of go directory if you have anything valuable in there.
+***Important:*** The `fix_install.sh` script will purge any pre-existing ***Go*** installation and reinstall it while resolving path-related inconsistencies. It’s strongly recommended to back up your ***Go*** directory if it contains any critical data.
 
 ### 🐧 **Manual Installation (if needed)**  
-Make sure to copy all the tools to /usr/bin to make it permanantly available from anywhere.
+Make sure to copy all the tools to `/usr/bin` to make it permanantly available from anywhere.
 ( `sudo cp ~/go/bin/* /usr/bin`
 
 ****Special Thanks to**** [tomnomnom](https://github.com/tomnomnom) , [projectdiscovery](https://github.com/projectdiscovery) and [curl](https://github.com/curl) for these amazing tools.
