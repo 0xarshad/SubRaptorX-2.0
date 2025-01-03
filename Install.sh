@@ -1,35 +1,18 @@
 #! /bin/bash
-
 green=$(tput setaf 2)
 reset=$(tput sgr0)
-${green}
-echo "Updating"
-${reset}
+echo "${green}Updating${reset}"
 sudo apt update -y
-${green}
-echo "Installing Go"
-{reset}
+echo "${green}Installing Go${reset}"
 sudo apt install golang-go -y
-${green}
-echo "Installing  Assetfinder"
-{reset}
+echo "${green}Installing  Assetfinder${reset}"
 go install -v github.com/tomnomnom/assetfinder@latest
-${green}
-echo "Installing  Subfinder"
-{reset}
+echo "${green}Installing  Subfinder${reset}"
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-${green}
-echo "Installing  Httprobe"
-{reset}
+echo "${green}Installing  Httprobe${reset}"
 go install github.com/tomnomnom/httprobe@latest
-${green}
-echo "Installing Waybackurls"
-{reset}
+echo "${green}Installing Waybackurls${reset}"
 go install github.com/tomnomnom/waybackurls@latest
-${green}
-echo "Copying files to /usr/bin"
-{reset}
+echo "${green}Copying files to /usr/bin${reset}"
 sudo cp -r /home/$(getent passwd $(id -u) | cut -d: -f1)/go/bin/* /usr/bin/
-${green}
-echo "Installation Completed"
-{reset}
+echo "${green}Installation Completed${reset}"
