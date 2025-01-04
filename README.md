@@ -95,7 +95,10 @@ sub2.example.com
 sub3.example.com
 --------------------------------------------
 ✅ Results saved in final_live_subs.txt
+
 ```
+---
+
 ## 💻 **GOROOT Error Remediation**  
 
 ***Important:*** These commands will purge any pre-existing ***Go*** installation and reinstall it while resolving path-related inconsistencies. It’s strongly recommended to back up your ***Go*** directory if it contains any critical data.
