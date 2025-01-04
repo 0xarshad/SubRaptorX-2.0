@@ -15,7 +15,7 @@
 
 - ✅ **Multi-Source Subdomain Enumeration:** Assetfinder, Subfinder, and Waybackurls.  
 - ✅ **Live Subdomain Validation:** Httprobe and Curl-based checks.  
-- ✅ **Automated Dependency Installation:** `install.sh` and `fix_install.sh` scripts for Automated installation.
+- ✅ **Automated Dependency Installation:** `install.sh` for Automated installation.
 - ✅ **URL Normalization:** Removes `http://` and `https://` prefixes for consistency.  
 - ✅ **Deduplication:** Ensures unique subdomains in the final output.  
 - ✅ **Stylish Terminal Interface:** Color-coded and easy-to-read output.  
@@ -25,9 +25,7 @@
 
 ## 🛠️ **Dependencies**  
 
-Dependencies are autonomously managed by the `install.sh` script utilizing ***Go***. During testing on widely-used Linux distributions, excluding ***Kali Linux***, I encountered a `GOROOT error` during the Subfinder installation process. To address this anomaly, I developed a remediation script named `fix_install.sh`. If you encounter a` GOROOT error` while executing `install.sh`, ensure you run `fix_install.sh` beforehand. Special thanks to [prathameshbagul](https://medium.com/@prathameshbagul) for their valuable contributions.
-
-***Important:*** The `fix_install.sh` script will purge any pre-existing ***Go*** installation and reinstall it while resolving path-related inconsistencies. It’s strongly recommended to back up your ***Go*** directory if it contains any critical data.
+Dependencies are autonomously managed by the `install.sh` script utilizing ***Go***. During testing on widely-used Linux distributions, excluding ***Kali Linux***, I encountered a `GOROOT error` during the Subfinder installation process. To address this anomaly, I developed a remediation below in the ***GOROOT remediation*** section. If you encounter any` GOROOT error` while executing `install.sh`, ensure you run these commands beforehand. Special thanks to [prathameshbagul](https://medium.com/@prathameshbagul) for their valuable contributions.
 
 ### 🐧 **Manual Installation (if needed)**  
 Make sure to copy all the tools to `/usr/bin` to make it permanantly available from anywhere.
@@ -98,7 +96,36 @@ sub3.example.com
 --------------------------------------------
 ✅ Results saved in final_live_subs.txt
 ```
+## 💻 **GOROOT Error Remediation**  
 
+***Important:*** These commands will purge any pre-existing ***Go*** installation and reinstall it while resolving path-related inconsistencies. It’s strongly recommended to back up your ***Go*** directory if it contains any critical data.
+
+1. **Remove existing Go and it's dependencies:**  
+   ```bash
+   sudo apt-get remove golang-go gccgo-go
+   sudo apt-get remove — auto-remove golang-go gccgo-go
+   sudo rm -rvf /usr/local/go
+   ```
+
+2. **Download and Extract Go Archive:**  
+   ```bash
+   wget https://dl.google.com/go/go1.21.3.linux-amd64.tar.gz
+   sudo tar -xvf go1.21.3.linux-amd64.tar.gz
+   ```
+
+3. **Place the Go directory in the desired location (eg: /usr/local/go)**  
+   ```bash
+   sudo mv ~/go /usr/local
+   ```
+
+4. **Set GOROOT Path and Reload Environment Variables :**  
+   ```bash
+   export GOROOT=/usr/local/go
+   export GOPATH=$HOME/go
+   export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+   source ~/.profile
+   ```
+   Now run install.sh
 ---
 
 ## 🤝 **Contributing**  
