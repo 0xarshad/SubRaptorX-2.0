@@ -1,6 +1,6 @@
 
 # 🦖 **SubRaptorX 2.0**  
-<img src="https://github.com/0xarshad/0xarshad.github.io/blob/main/images/project-5.jpg">
+<img src="SubRaptorX2.0.jpg">
 🔍 An advanced, feature-rich Bash script for discovering and validating live subdomains effortlessly. 
 
 ---
