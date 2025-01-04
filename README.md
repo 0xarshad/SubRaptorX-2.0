@@ -1,7 +1,7 @@
 
 # 🦖 **SubRaptorX 2.0**  
-
-🔍 **An advanced, feature-rich Bash script for discovering and validating live subdomains effortlessly.**  
+<img src="https://github.com/0xarshad/0xarshad.github.io/blob/main/images/project-5.jpg">
+🔍 An advanced, feature-rich Bash script for discovering and validating live subdomains effortlessly. 
 
 ---
 
@@ -102,8 +102,8 @@ sub3.example.com
 
 1. **Remove existing Go and it's dependencies:**  
    ```bash
-   sudo apt-get remove golang-go gccgo-go
-   sudo apt-get remove — auto-remove golang-go gccgo-go
+   sudo apt-get remove golang-go gccgo-go -y
+   sudo apt-get remove --auto-remove golang-go gccgo-go -y
    sudo rm -rvf /usr/local/go
    ```
 
@@ -115,7 +115,7 @@ sub3.example.com
 
 3. **Place the Go directory in the desired location (eg: /usr/local/go)**  
    ```bash
-   sudo mv ~/go /usr/local
+   sudo mv go /usr/local
    ```
 
 4. **Set GOROOT Path and Reload Environment Variables :**  
@@ -125,7 +125,7 @@ sub3.example.com
    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
    source ~/.profile
    ```
-   Now run install.sh
+   Now run `install.sh`
 ---
 
 ## 🤝 **Contributing**  
