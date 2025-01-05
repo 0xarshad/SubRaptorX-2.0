@@ -9,6 +9,9 @@
 
 **SubRaptorX 2.0** is the newer version my old subdomain enumeration script. It combines the power of multiple tools like **Assetfinder**, **Subfinder**, **Waybackurls**, **Httprobe**, and **Curl** to discover, validate, and organize live subdomains. With a stylish terminal interface and automated dependency installation, it ensures a seamless experience for both security professionals and enthusiasts.  
 
+<img src="terminal.png">
+NB:- This image shows how it looks on Parrot OS. There could be slight changes in icons and text depending on the OS
+
 ---
 
 ## 🚀 **Features**  
@@ -25,7 +28,7 @@
 
 ## 🛠️ **Dependencies**  
 
-Dependencies are autonomously managed by the `install.sh` script utilizing ***Go***. During testing on widely-used Linux distributions, excluding ***Kali Linux***, I encountered a `GOROOT error` during the Subfinder installation process. To address this anomaly, I developed a remediation below in the ***GOROOT remediation*** section. If you encounter any` GOROOT error` while executing `install.sh`, ensure you run these commands beforehand. Special thanks to [prathameshbagul](https://medium.com/@prathameshbagul) for their valuable contributions.
+Dependencies are autonomously managed by the `install.sh` script utilizing ***Go***. During testing on widely-used Linux distributions, excluding ***Kali Linux***, I encountered a `GOROOT error` during the Subfinder installation process. To address this anomaly, I added a remediation below in the ***GOROOT Remediation*** section. If you encounter ` GOROOT error` while executing `install.sh`, ensure you run these commands beforehand. Special thanks to [prathameshbagul](https://medium.com/@prathameshbagul) for their valuable contributions.
 
 ### 🐧 **Manual Installation (if needed)**  
 Make sure to copy all the tools to `/usr/bin` to make it permanantly available from anywhere.
@@ -44,28 +47,19 @@ Make sure to copy all the tools to `/usr/bin` to make it permanantly available f
 
 1. **Clone the Repository:**  
    ```bash
-   git clone https://github.com/yourusername/SubRaptorX.git
-   cd SubRaptorX
+   git clone https://github.com/0xarshad/SubRaptorX-2.0.git && cd SubRaptorX-2.0
    ```
 
 2. **Run the Installation Script:**  
    ```bash
-   sudo chmod +x install.sh
-   sudo ./install.sh
+   sudo chmod +x install.sh && sudo ./install.sh
    ```
 
-3. **Make the Script Executable:**  
+3. **Run SubRaptorX 2.0:**  
    ```bash
-   chmod +x SubRaptorX.sh
+   chmod +x SubRaptorX.sh && ./SubRaptorX.sh
    ```
-
-4. **Run SubRaptorX 2.0:**  
-   ```bash
-   ./SubRaptorX.sh
-   ```
-
----
-
+   
 ## 📝 **Usage**  
 
 1. **Run the script:**  
@@ -105,15 +99,12 @@ sub3.example.com
 
 1. **Remove existing Go and it's dependencies:**  
    ```bash
-   sudo apt-get remove golang-go gccgo-go -y
-   sudo apt-get remove --auto-remove golang-go gccgo-go -y
-   sudo rm -rvf /usr/local/go
+   sudo apt-get remove golang-go gccgo-go -y && sudo apt-get remove --auto-remove golang-go gccgo-go -y && sudo rm -rvf /usr/local/go
    ```
 
 2. **Download and Extract Go Archive:**  
    ```bash
-   wget https://dl.google.com/go/go1.21.3.linux-amd64.tar.gz
-   sudo tar -xvf go1.21.3.linux-amd64.tar.gz
+   wget https://dl.google.com/go/go1.21.3.linux-amd64.tar.gz && sudo tar -xvf go1.21.3.linux-amd64.tar.gz
    ```
 
 3. **Place the Go directory in the desired location (eg: /usr/local/go)**  
@@ -123,10 +114,7 @@ sub3.example.com
 
 4. **Set GOROOT Path and Reload Environment Variables :**  
    ```bash
-   export GOROOT=/usr/local/go
-   export GOPATH=$HOME/go
-   export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-   source ~/.profile
+   export GOROOT=/usr/local/go && export GOPATH=$HOME/go && export PATH=$GOPATH/bin:$GOROOT/bin:$PATH && source ~/.profile
    ```
    Now run `install.sh`
 ---
